@@ -1,4 +1,4 @@
-Ecore2Knime is an extension of the [http://www.knime.org/](KNIME) tool providing additional nodes for [http://www.eclipse.org/modeling/emf](EMF) ECore model manipulation.
+Ecore2Knime is an extension of the [KNIME](http://www.knime.org/) tool providing additional nodes for [EMF](http://www.eclipse.org/modeling/emf) ECore model manipulation.
 
 ## Node proposals
-Specification of the [https://github.com/d3sreq/Ecore2Knime/wiki/Node-proposals](proposed nodes) is on a separate page.
+Specification of the [proposed nodes](https://github.com/d3sreq/Ecore2Knime/wiki/Node-proposals) is on a separate page.
