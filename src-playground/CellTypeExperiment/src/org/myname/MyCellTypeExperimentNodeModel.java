@@ -3,6 +3,8 @@ package org.myname;
 import java.io.File;
 import java.io.IOException;
 
+import org.eclipse.emf.examples.extlibrary.Book;
+import org.eclipse.emf.examples.extlibrary.EXTLibraryFactory;
 import org.knime.core.data.DataCell;
 import org.knime.core.data.DataColumnSpec;
 import org.knime.core.data.DataColumnSpecCreator;
@@ -24,6 +26,7 @@ import org.knime.core.node.NodeLogger;
 import org.knime.core.node.NodeModel;
 import org.knime.core.node.NodeSettingsRO;
 import org.knime.core.node.NodeSettingsWO;
+import org.myname.data.EObjectCell;
 
 
 /**
@@ -77,28 +80,36 @@ public class MyCellTypeExperimentNodeModel extends NodeModel {
         
         // the data table spec of the single output table, 
         // the table will have three columns:
-        DataColumnSpec[] allColSpecs = new DataColumnSpec[3];
-        allColSpecs[0] = 
-            new DataColumnSpecCreator("Column 0", StringCell.TYPE).createSpec();
-        allColSpecs[1] = 
-            new DataColumnSpecCreator("Column 1", DoubleCell.TYPE).createSpec();
-        allColSpecs[2] = 
-            new DataColumnSpecCreator("Column 2", IntCell.TYPE).createSpec();
+        DataColumnSpec[] allColSpecs = new DataColumnSpec[] {
+	        new DataColumnSpecCreator("Column 0", StringCell.TYPE).createSpec()
+	        , new DataColumnSpecCreator("Column 1", DoubleCell.TYPE).createSpec()
+	        , new DataColumnSpecCreator("Column 2", IntCell.TYPE).createSpec()
+	        , new DataColumnSpecCreator("Column 3", StringCell.TYPE).createSpec()
+	    };
         DataTableSpec outputSpec = new DataTableSpec(allColSpecs);
+
         // the execution context will provide us with storage capacity, in this
         // case a data container to which we will add rows sequentially
         // Note, this container can also handle arbitrary big data tables, it
         // will buffer to disc if necessary.
         BufferedDataContainer container = exec.createDataContainer(outputSpec);
+        
         // let's add m_count rows to it
         for (int i = 0; i < m_count.getIntValue(); i++) {
             RowKey key = new RowKey("Row " + i);
             // the cells of the current row, the types of the cells must match
             // the column spec (see above)
-            DataCell[] cells = new DataCell[3];
-            cells[0] = new StringCell("String_" + i); 
-            cells[1] = new DoubleCell(0.5 * i); 
-            cells[2] = new IntCell(i);
+            DataCell[] cells = new DataCell[] {
+	            new StringCell("String_" + i) 
+	            , new DoubleCell(0.5 * i) 
+	            , new IntCell(i)
+//	            , new EObjectCell(EXTLibraryFactory.eINSTANCE.createBook())
+	            , new StringCell(Integer.toString(i))
+            };
+            
+            Book b = EXTLibraryFactory.eINSTANCE.createBook();
+            b.setTitle("book " + i);
+            
             DataRow row = new DefaultRow(key, cells);
             container.addRowToTable(row);
             

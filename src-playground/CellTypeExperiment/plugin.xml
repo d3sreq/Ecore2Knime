@@ -21,5 +21,15 @@
             factory-class="org.myname.MyCellTypeExperimentNodeFactory"
             id="org.myname.MyCellTypeExperimentNodeFactory"/>
    </extension>
+   <extension
+         point="org.knime.core.DataValueRenderer">
+      <dataValue
+            valueClass="org.myname.data.EObjectValue">
+         <renderer
+               rendererFactoryClass="org.myname.data.EObjectValueRenderer$Factory"
+               suggestAsDefault="false">
+         </renderer>
+      </dataValue>
+   </extension>
    
 </plugin>

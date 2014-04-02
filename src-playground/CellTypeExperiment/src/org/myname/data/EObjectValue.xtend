@@ -3,6 +3,7 @@ package org.myname.data
 import javax.swing.Icon
 import org.knime.core.data.DataValue
 import org.knime.core.data.ExtensibleUtilityFactory
+import org.eclipse.emf.ecore.EObject
 
 interface EObjectValue extends DataValue {
 
@@ -11,7 +12,9 @@ interface EObjectValue extends DataValue {
 	 *
 	 * @see DataValue#UTILITY
 	 */
-	val UTILITY = new EObjectUtilityFactory
+	val DataValue.UtilityFactory UTILITY = new EObjectUtilityFactory
+	
+	def EObject getValue()
 }
 
 /** Implementations of the meta information of this value class. */
@@ -38,4 +41,5 @@ class EObjectUtilityFactory extends ExtensibleUtilityFactory {
 	override public String getName() {
 		"EObject"
 	}
+	
 }
