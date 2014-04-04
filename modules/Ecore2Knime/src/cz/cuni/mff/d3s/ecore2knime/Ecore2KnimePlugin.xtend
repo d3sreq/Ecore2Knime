@@ -1,11 +1,7 @@
-/* @(#)$RCSfile$ 
- * $Revision$ $Date$ $Author$
- *
- */
-package cz.cuni.mff.d3s.ecore2knime;
+package cz.cuni.mff.d3s.ecore2knime
 
-import org.eclipse.core.runtime.Plugin;
-import org.osgi.framework.BundleContext;
+import org.eclipse.core.runtime.Plugin
+import org.osgi.framework.BundleContext
 
 /**
  * This is the eclipse bundle activator.
@@ -16,16 +12,16 @@ import org.osgi.framework.BundleContext;
  *
  * @author 
  */
-public class EcoreSourceNodePlugin extends Plugin {
-    // The shared instance.
-    private static EcoreSourceNodePlugin plugin;
+class Ecore2KnimePlugin extends Plugin {
+	
+	// The shared instance.
+    var static Ecore2KnimePlugin plugin
 
     /**
      * The constructor.
      */
-    public EcoreSourceNodePlugin() {
-        super();
-        plugin = this;
+    new() {    
+        plugin = this
     }
 
     /**
@@ -34,10 +30,8 @@ public class EcoreSourceNodePlugin extends Plugin {
      * @param context The OSGI bundle context
      * @throws Exception If this plugin could not be started
      */
-    @Override
-    public void start(final BundleContext context) throws Exception {
-        super.start(context);
-
+    override start(BundleContext context) throws Exception {
+        super.start(context)
     }
 
     /**
@@ -46,10 +40,9 @@ public class EcoreSourceNodePlugin extends Plugin {
      * @param context The OSGI bundle context
      * @throws Exception If this plugin could not be stopped
      */
-    @Override
-    public void stop(final BundleContext context) throws Exception {
-        super.stop(context);
-        plugin = null;
+    override stop(BundleContext context) throws Exception {
+        super.stop(context)
+        plugin = null
     }
 
     /**
@@ -57,9 +50,7 @@ public class EcoreSourceNodePlugin extends Plugin {
      * 
      * @return Singleton instance of the Plugin
      */
-    public static EcoreSourceNodePlugin getDefault() {
-        return plugin;
+    def static Ecore2KnimePlugin getDefault() {
+        plugin
     }
-
 }
-

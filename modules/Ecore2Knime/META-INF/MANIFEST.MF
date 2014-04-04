@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: EcoreSource-Node extension for KNIME Workbench
+Bundle-Name: Ecore extensions for KNIME Workbench
 Bundle-SymbolicName: cz.cuni.mff.d3s.ecore2knime; singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: ecoresource.jar
-Bundle-Activator: cz.cuni.mff.d3s.ecore2knime.EcoreSourceNodePlugin
+Bundle-Activator: cz.cuni.mff.d3s.ecore2knime.Ecore2KnimePlugin
 Bundle-Vendor: 
 Require-Bundle: org.eclipse.core.runtime,
  org.knime.workbench.core,
@@ -22,6 +22,4 @@ Require-Bundle: org.eclipse.core.runtime,
  javax.persistence;bundle-version="2.0.1",
  org.apache.log4j;bundle-version="1.2.16"
 Bundle-ActivationPolicy: lazy
-Export-Package: cz.cuni.mff.d3s.ecore2knime,
- cz.cuni.mff.d3s.ecore2knime.persistence
 

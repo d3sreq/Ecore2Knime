@@ -1,0 +1,5 @@
+- vzit model + metamodel
+- serializace do db
+- HQL pro dotazovani nad modelem
+- vysledek - kolekce EObjectu, ziskat jejich id (nebo referenci v resource), abych ho mohl zapsat do stringu a poslat dalsim uzlum
+- uzel dostane id - vytahne jej opet z db a ziska EObject

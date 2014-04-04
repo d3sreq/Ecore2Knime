@@ -17,9 +17,21 @@
    <extension
          point="org.knime.workbench.repository.nodes">
       <node
-            category-path="/"
-            factory-class="cz.cuni.mff.d3s.ecore2knime.EcoreSourceNodeFactory"
-            id="cz.cuni.mff.d3s.ecore2knime.EcoreSourceNodeFactory"/>
+            category-path="/ecore"
+            expert-flag="false"
+            factory-class="cz.cuni.mff.d3s.ecore2knime.node.teneosource.TeneoSourceNodeFactory"
+            id="cz.cuni.mff.d3s.ecore2knime.TeneoSourceNodeFactory">
+      </node>
+   </extension>
+   <extension
+         point="org.knime.workbench.repository.categories">
+      <category
+            icon="icons/default.png"
+            level-id="ecore"
+            locked="true"
+            name="Ecore"
+            path="/">
+      </category>
    </extension>
    
 </plugin>

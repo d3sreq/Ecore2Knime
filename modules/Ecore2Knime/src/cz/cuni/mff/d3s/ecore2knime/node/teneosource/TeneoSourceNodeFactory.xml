@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <knimeNode icon="./default.png" type="Source" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.8 http://knime.org/node/v2.8.xsd">
-    <name>EcoreSource</name>
+    <name>TeneoSource</name>
     
-    <shortDescription>
-        Serializes given ecore model to the shared DB
+    <shortDescription>        
+        Creates unique identificator for the access to the shared hibernate DB. All nodes connected to this node share same DB "schema".
     </shortDescription>
     
     <fullDescription>
