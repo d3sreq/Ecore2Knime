@@ -3,12 +3,14 @@
     <name>TeneoSource</name>
     
     <shortDescription>        
-        Creates unique identificator for the access to the shared hibernate DB. All nodes connected to this node share same DB "schema".
+        Creates unique identificator for the access to the shared hibernate DB.
     </shortDescription>
     
     <fullDescription>
-        <intro>Insert long description here...</intro>
-        
+        <intro>
+            All nodes connected to this node share same DB "schema".
+            Identifier is unique in workflow and also among running instances of the workflow (two same nodes of the same running workflow will obtain different IDs. 
+        </intro>        
         
         <option name="short name of first option (like in the dialog)">description of first option</option>
         <option name="short name of second option (like in the dialog)">description of second option</option>
