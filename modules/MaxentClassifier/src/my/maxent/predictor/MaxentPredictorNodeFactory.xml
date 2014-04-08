@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./default.png" type="Predictor" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.8 http://knime.org/node/v2.8.xsd">
+    <name>Maxent Predictor</name>
+    
+    <shortDescription>
+        This node uses a trained Maximum Entropy model to classify results
+    </shortDescription>
+    
+    <fullDescription>
+        <intro>Insert long description here...</intro>
+    </fullDescription>
+    
+    <ports>
+        <inPort index="0" name="Maxent model">Trained Maxent model</inPort>
+        <inPort index="1" name="Input Data">Data to classify</inPort>
+
+        <outPort index="0" name="Predictions">Classified data</outPort>
+    </ports>    
+</knimeNode>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?>
+<plugin>  
+	<extension point="org.knime.workbench.repository.nodes">
+		<node category-path="/re" factory-class="my.maxent.MaxentLearnerNodeFactory" id="my.maxent.MaxentLearnerNodeFactory"/>
+		<node category-path="/re" factory-class="my.maxent.predictor.MaxentPredictorNodeFactory" id="my.maxent.predictor.MaxentPredictorNodeFactory"/>
+	</extension>
+ <extension
+       point="org.knime.workbench.repository.categories">
+    <category
+          icon="src/my/maxent/maxent-icon.png"
+          level-id="re"
+          locked="true"
+          name="REPROTOOL"
+          path="/">
+    </category>
+ </extension>
+</plugin>

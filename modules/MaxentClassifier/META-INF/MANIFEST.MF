@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MaxentLearner-Node extension for KNIME Workbench
+Bundle-SymbolicName: my.maxent; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Viliam Simko
+Require-Bundle: org.eclipse.core.runtime,
+ org.knime.workbench.core,
+ org.knime.workbench.repository,
+ org.knime.base,
+ org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib
+Bundle-ActivationPolicy: lazy
+Export-Package: my.maxent; uses:="org.eclipse.core.runtime,  org.knime.core.node,  org.osgi.framework,  org.knime.core.node.defaultnodesettings",
+ my.maxent.predictor;uses:="org.knime.core.node,org.knime.core.node.defaultnodesettings"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: lib/apache-opennlp-osgi.maxent.jar,lib/apache-opennlp-osgi.models.jar,lib/apache-opennlp-osgi.tools.jar,bin/
+
