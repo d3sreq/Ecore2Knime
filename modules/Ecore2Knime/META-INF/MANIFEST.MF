@@ -12,6 +12,15 @@ Require-Bundle: org.eclipse.core.runtime,
  org.knime.base,
  org.eclipse.xtend.lib;bundle-version="2.5.3",
  org.eclipse.core.runtime;bundle-version="[3.5.0,5.0.0)",
- org.eclipse.emf.ecore.xmi;bundle-version="[2.7.0,3.0.0)"
+ org.eclipse.emf.ecore.xmi;bundle-version="[2.7.0,3.0.0)",
+ org.eclipse.emf.teneo;bundle-version="2.0.1",
+ org.hibernate;bundle-version="4.1.1",
+ org.eclipse.emf.teneo.hibernate;bundle-version="2.0.1",
+ org.apache.commons.logging,
+ javax.persistence;bundle-version="2.0.1",
+ org.hsqldb;bundle-version="2.2.8",
+ org.apache.log4j;bundle-version="1.2.15",
+ org.postgresql;bundle-version="9.0.0",
+ com.db4o;bundle-version="7.4.155"
 Bundle-ActivationPolicy: lazy
 

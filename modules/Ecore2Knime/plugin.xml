@@ -19,8 +19,14 @@
       <node
             category-path="/ecore"
             expert-flag="false"
-            factory-class="cz.cuni.mff.d3s.ecore2knime.node.teneosource.TeneoSourceNodeFactory"
-            id="cz.cuni.mff.d3s.ecore2knime.TeneoSourceNodeFactory">
+            factory-class="cz.cuni.mff.d3s.ecore2knime.node.idsource.IdSourceNodeFactory"
+            id="cz.cuni.mff.d3s.ecore2knime.IdSourceNodeFactory">
+      </node>
+      <node
+            category-path="/ecore"
+            expert-flag="false"
+            factory-class="cz.cuni.mff.d3s.ecore2knime.node.ecoreloader.EcoreLoaderNodeFactory"
+            id="cz.cuni.mff.d3s.ecore2knime.EcoreLoaderNodeFactory">
       </node>
    </extension>
    <extension
