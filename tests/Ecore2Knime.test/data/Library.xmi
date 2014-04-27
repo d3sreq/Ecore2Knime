@@ -4,28 +4,25 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:extlib="http:///org/eclipse/emf/examples/library/extlibrary.ecore/1.0.0"
-    xsi:schemaLocation="http:///org/eclipse/emf/examples/library/extlibrary.ecore/1.0.0 ../../org.eclipse.emf.examples.library/model/extlibrary.ecore"
     address="a"
     name="a">
   <stock xsi:type="extlib:Book"
       publicationDate="2000-01-01T00:00:00.000+0100"
-      borrowers="//@borrowers.1"
+      borrowers="//@borrowers.0"
       title="Mystery Book 1"
       author="//@writers.0"/>
   <stock xsi:type="extlib:Book"
       publicationDate="2000-01-01T00:00:00.000+0100"
-      borrowers="//@borrowers.0"
       title="Sience Book 1"
       category="ScienceFiction"
       author="//@writers.0"/>
   <stock xsi:type="extlib:Book"
       publicationDate="2000-01-01T00:00:00.000+0100"
-      borrowers="//@borrowers.1"
+      borrowers="//@borrowers.0"
       title="Mystery Book 2"
       author="//@writers.1"/>
   <stock xsi:type="extlib:Book"
       publicationDate="2000-01-01T00:00:00.000+0100"
-      borrowers="//@borrowers.0"
       title="Sience Book 2"
       category="ScienceFiction"
       author="//@writers.1"/>
@@ -38,13 +35,8 @@
       lastName="Bokowski"
       books="//@stock.2 //@stock.3"/>
   <borrowers
-      address="Hometown"
-      firstName="Paul"
-      lastName="Webster"
-      borrowed="//@stock.1 //@stock.3"/>
-  <borrowers
       address="Homecity"
       firstName="Remy"
       lastName="Suen"
-      borrowed="//@stock.0 //@stock.2"/>
+      borrowed="//@stock.2 //@stock.0"/>
 </extlib:Library>

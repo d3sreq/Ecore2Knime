@@ -3,3 +3,41 @@
 - HQL pro dotazovani nad modelem
 - vysledek - kolekce EObjectu, ziskat jejich id (nebo referenci v resource), abych ho mohl zapsat do stringu a poslat dalsim uzlum
 - uzel dostane id - vytahne jej opet z db a ziska EObject
+- pouzit SQLite, predavat si pouze connection string, v nem bude cesta k souboru s DB - odpada nutnost startovat DB.
+- ID uzlu - kombinace ID workflow + jednoznacne ID v ramci workflow, napr. counter
+context properties
+knime.workspace + context.workflow.path
+
+ReadContextPropertyConfiguration
+
+loader - 
+
+Uzly:
+workflow unique id (TeneoSource)
+- no input
+- output - table with one row (identifier)
+- mozna mit moznost nastavit nejaky pattern
+
+loader
+- input: 
+	- connection string
+	- table with path to metamodels
+	- table with path to models
+- output:
+	- connection string
+
+query
+- input
+	- connection string
+
+- output
+	- result of the HQL query, returned objects are detected and 
+	
+DEVELOPER INSTALLATION
+
+- install eclipse knime
+- add to eclipse.ini settings to speed up eclipse installation http://www.vijayp.ca/blog/2011/09/why-eclipses-check-for-updates-is-horribly-slow-and-how-to-fix-it/
+- teneo installation http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install (including EMF)
+- xtend update site http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+
+log4j plugin zpusobuje error, ktery se vypisuje v konzoli
