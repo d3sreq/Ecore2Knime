@@ -4,7 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:my="my"
-    xsi:schemaLocation="my My.ecore">
+    >
   <persons name="Bill"/>
   <persons name="Jane"/>
 </my:Company>
